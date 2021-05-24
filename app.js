@@ -66,7 +66,7 @@ var app = {
     app.Xplayer = vsBanner.split(':')[0] || '';
     app.Oplayer = vsBanner.split('|')[2].slice(0, vsBanner.split('|')[2].indexOf(':')) || '';
     renderCount();
-    displayTurn();
+    app.displayTurn();
   },
   //////////////////////DISPLAY WHOS TURN IT IS////////////////
   displayTurn: (off) => {
