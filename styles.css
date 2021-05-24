@@ -19,6 +19,44 @@ html {
   top: 25%;
 }
 
+#vsBanner {
+  background-color: lightgreen;
+  border-style: double;
+  border-width: thick;
+  border-color: black;
+  padding: 5px;
+  position: absolute;
+  left: 65%;
+  font-size: 35px;
+  width: fit-content;
+}
+
+.textBox {
+  top: 35%;
+  left: 45%;
+  position: absolute;
+  background-color: lightgrey;
+  font-size: 20px;
+  padding: 5px;
+  border-style: double;
+  border-width: thick;
+  border-color: black;
+}
+#oUserName {
+  top: 45%;
+}
+
+#vs {
+  top: 70%;
+  position: absolute;
+  padding: 5px;
+  width: fit-content;
+  background-color: lightgreen;
+  border-style: double;
+  border-width: thick;
+  border-color: black;
+}
+
 #title {
   padding: 5px;
   width: fit-content;

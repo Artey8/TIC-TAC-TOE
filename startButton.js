@@ -1,5 +1,6 @@
 //////////////////FUNCTIONALITY/////////////////////
 var startHandler = (event) => {
+  selectNames();
   app.initialize();
 };
 ////////////////START BUTTON//////////////////////

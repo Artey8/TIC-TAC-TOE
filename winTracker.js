@@ -13,7 +13,6 @@ document.getElementById('app').appendChild(oWins);
 var xWinCount;
 var oWinCount;
 var renderCount = () => {
-  debugger;
   if (!document.getElementById('xWinCount')) {
     xWinCount = document.createElement('h1');
     xWinCount.id = 'xWinCount'
