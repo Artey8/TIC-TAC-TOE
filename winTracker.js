@@ -1,15 +1,16 @@
+////////////////O WINS ELEMENT/////////////////
 var xWins = document.createElement('h1');
 xWins.className = 'winCount';
 xWins.id = 'XWins';
 xWins.innerHTML = 'X WINS: ';
 document.getElementById('app').appendChild(xWins)
+////////////////X WINS ELEMENT/////////////////
 var oWins = document.createElement('h1');
 oWins.className = 'winCount';
 oWins.id = 'OWins';
 oWins.innerHTML = 'O WINS: ';
 document.getElementById('app').appendChild(oWins);
-
-
+///////////////RENDER COUNT FUNCTION//////////////
 var xWinCount;
 var oWinCount;
 var renderCount = () => {
