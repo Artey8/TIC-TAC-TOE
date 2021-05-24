@@ -1,11 +1,12 @@
 html {
-  background-color: skyblue;
+  background-image:linear-gradient(forestgreen, lime, lightgreen);
+  height: 1000px;
 }
 
 #title {
   padding: 5px;
   width: fit-content;
-  background-color: white;
+  background-color: lightgreen;
   border-style: double;
   border-width: thick;
   border-color: black;
@@ -14,7 +15,7 @@ html {
 
 #turnTitle {
   padding: 5px;
-  background-color: white;
+  background-color: lightgreen;
   border-style: double;
   border-width: thick;
   border-color: black;
@@ -24,29 +25,30 @@ html {
 }
 #boardDiv {
   margin-left: 25%;
-  background-color: white;
-  border-style: solid;
-  border-width: thick;
-  border-color: black;
-  border-radius: 2%;
-  width: fit-content;
+
 }
 .box {
   border-style: solid;
   border-color: black;
   border-radius: 10%;
-  background-color: lightsalmon;
-  height: 300px;
-  width: 300px;
+  background-color: lightgrey;
+  height: 250px;
+  width: 250px;
   font-size: 100px;
 }
 
 #startButton {
-  margin-left: 49%;
+  font-size: 75px;
+  margin-top: 5%;
+  margin-left: 36%;
+  border-style: double;
+  border-width: thick;
   border-color: black;
   padding: 10px;
-  border-radius: 5%;
   background-color: lightgreen;
+}
+#startButton:hover {
+  background-color: lightgray;
 }
 
 #endButton {
@@ -57,9 +59,12 @@ html {
   padding: 10px;
   background-color: lightcoral;
 }
+#endbutton:hover {
+  background-color: red;
+}
 
 .box:hover {
-  background-color: lightcoral;
+  background-color: rgb(245, 224, 37);
 }
 
 #victoryBanner {
