@@ -66,6 +66,7 @@ var app = {
     app.Xplayer = vsBanner.split(':')[0] || '';
     app.Oplayer = vsBanner.split('|')[2].slice(0, vsBanner.split('|')[2].indexOf(':')) || '';
     renderCount();
+    displayTurn();
   },
   //////////////////////DISPLAY WHOS TURN IT IS////////////////
   displayTurn: (off) => {
@@ -79,7 +80,7 @@ var app = {
     }
     var turnTitle = document.createElement('h1');
     turnTitle.id = 'turnTitle';
-    turnTitle.innerHTML = state.turn + '\'s Turn';
+    turnTitle.innerHTML = `${app[`${state.turn}player`]}` + ': ' + state.turn + '\'s Turn';
     document.getElementById('app').prepend(turnTitle);
   },
   ////////////////////CHECK FOR WIN FUNCTION/////////////////

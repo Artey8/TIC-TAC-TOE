@@ -17,6 +17,9 @@ document.getElementById('app').appendChild(oUserName);
 document.getElementById('app').appendChild(xUserName);
 //////////////FUNCTIONALITY////////////////////////
 selectNames = () => {
+  if (document.getElementById('vsBanner')) {
+    document.getElementById('vsBanner').remove();
+  }
   var vsBanner = document.createElement('h1');
   vsBanner.id = 'vsBanner';
   vsBanner.innerHTML = `${xUserName.value}:X |VS| ${oUserName.value}:O`

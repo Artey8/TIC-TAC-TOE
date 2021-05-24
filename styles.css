@@ -20,13 +20,14 @@ html {
 }
 
 #vsBanner {
+  position: relative;
+  float: right;
+  top: 10%;
   background-color: lightgreen;
   border-style: double;
   border-width: thick;
   border-color: black;
   padding: 5px;
-  position: absolute;
-  left: 65%;
   font-size: 35px;
   width: fit-content;
 }
