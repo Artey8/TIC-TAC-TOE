@@ -1,15 +1,23 @@
 ///////////////////GAME STATE/////////////////////////////
 var state = {
+  XWins: 0,
+  OWins: 0,
   turn: 'X',
   game: 'stopped',
   ///////////////////HANDLES STATE CHANGES/////////////////
   change: (change1) => {
+    if (change1 === 'CATSGAME') {
+      state.game = 'CATSGAME';
+      app.victory();
+    }
     if (change1 === 'OWINS') {
       state.game = 'OWINS';
+      state.OWins++;
       app.victory();
     }
     if (change1 === 'XWINS') {
       state.game = 'XWINS';
+      state.XWins++;
       app.victory();
     }
     if (change1 === 'O') {
@@ -38,7 +46,6 @@ var state = {
         document.getElementById('boardDiv').remove();
         app.victory('off');
         app.displayTurn('off');
-        state.turn = 'X'
       }
       state.game = change1;
     }
@@ -51,6 +58,7 @@ var app = {
     console.log('Game_Started');
     //This will make it so the game can only start once
     state.change('playing');
+    renderCount();
   },
   //////////////////////DISPLAY WHOS TURN IT IS////////////////
   displayTurn: (off) => {
@@ -95,10 +103,14 @@ var app = {
   },
   /////////////////////UPDATE MATRIX FUNCITONS////////////////
   updateMatrix: () => {
+    var catsGame = true;
     var y = 1;
     var x = 1;
     while (y < 4) {
       var cur = document.getElementById(`r${y}s${x}`).innerHTML
+      if (cur === '') {
+        catsGame = false;
+      }
       app.matrix[`row${y}`][x - 1] = cur;
       if (x === 3) {
         y++;
@@ -120,6 +132,9 @@ var app = {
       }
     }
    app.updateDiags();
+   if (catsGame) {
+    state.change('CATSGAME');
+   }
   },
   updateDiags: () => {
     var dx = 1;
@@ -152,6 +167,8 @@ var app = {
     victoryBanner.innerHTML = state.game;
     victoryBanner.id = "victoryBanner";
     document.getElementById('app').appendChild(victoryBanner);
+    state.turn = state.game[0];
+    renderCount();
     setTimeout(state.change.bind(null, 'stopped'), 1500)
   }
 

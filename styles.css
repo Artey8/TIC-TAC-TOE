@@ -3,6 +3,22 @@ html {
   height: 1000px;
 }
 
+.winCount {
+  border-style: double;
+  border-width: thick;
+  border-color: black;
+  padding: 10px;
+  position: absolute;
+  background-color: lightgreen;
+  height: 190px;
+}
+#XWins {
+  top: 1%;
+}
+#OWins {
+  top: 25%;
+}
+
 #title {
   padding: 5px;
   width: fit-content;
