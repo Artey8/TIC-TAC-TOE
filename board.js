@@ -3,13 +3,24 @@
 var allBoxes;
 
 var board = {
+  rotate: () => {
+    for (var i = 0; i < allBoxes.length; i++) {
+      if (allBoxes[i].innerHTML !== '') {
+        //console.log(allBoxes[i])
+      }
+    }
+
+  },
+
   addClick: (arrayOfElements) => {
     for (var i = 0; i < arrayOfElements.length; i++) {
       var cur = arrayOfElements[i];
+      /////////////CLICK HANDLER FOR BOXS///////////////////
       cur.onclick = (event) => {
         if (event.target.innerHTML === '') {
           event.target.innerHTML = state.turn;
           state.change(state.turn);
+          board.rotate();
         } else {
           alert('Already Taken')
         }

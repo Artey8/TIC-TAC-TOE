@@ -177,9 +177,13 @@ var app = {
       }
     }
     var victoryBanner = document.createElement('h1');
-    var winningPlayer = app[`${state.game[0]}player`];
-    console.log(winningPlayer);
+    if (state.game !== 'CATSGAME') {
+      var winningPlayer = app[`${state.game[0]}player`];
+
     victoryBanner.innerHTML = `${state.game[0]}:${winningPlayer} WINS`;
+    } else {
+      victoryBanner.innerHTML = `CATSGAME`
+    }
     victoryBanner.id = "victoryBanner";
     document.getElementById('app').appendChild(victoryBanner);
     state.turn = state.game[0];
